@@ -1,0 +1,41 @@
+{
+	"name": "qs-middleware",
+	"version": "0.0.0",
+
+	"description": "Connect querystring middleware",
+	"keywords": [ "connect", "querystring" ],
+
+	"author": "Nature Publishing Group",
+	"contributors": [
+		"Rowan Manning (http://rowanmanning.com/)"
+	],
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nature/qs-middleware.git"
+	},
+	"homepage": "https://github.com/nature/qs-middleware",
+	"bugs": "https://github.com/nature/qs-middleware/issues",
+	"license": "LGPL-3.0",
+
+	"engines": {
+		"node": ">=0.10"
+	},
+	"dependencies": {
+		"qs": "~6.0"
+	},
+	"devDependencies": {
+		"istanbul": "~0.3",
+		"jscs": "^2",
+		"jshint": "^2",
+		"mocha": "^2",
+		"mockery": "~1.4",
+		"proclaim": "^3",
+		"sinon": "^1"
+	},
+
+	"main": "./lib/qs-middleware.js",
+	"scripts": {
+		"test": "make ci"
+	}
+}
