@@ -11,7 +11,6 @@
 		"describe": true,
 		"it": true
 	},
-	"globalstrict": true,
 	"latedef": "nofunc",
 	"maxcomplexity": 4,
 	"maxdepth": 2,
@@ -23,6 +22,7 @@
 	"nonstandard": true,
 	"regexp": true,
 	"shadow": true,
+	"strict": true,
 	"sub": true,
 	"trailing": true,
 	"undef": true,
