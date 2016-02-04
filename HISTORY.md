@@ -1,6 +1,10 @@
 
 # History
 
-## 1.0.0 (2015-11-30)
+## 1.0.1 (2016-02-04)
+
+  * Update the repository references and copyright
+
+## 1.0.0 (2016-02-04)
 
   * Initial release
