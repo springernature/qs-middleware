@@ -77,22 +77,22 @@ License
 -------
 
 QS Middleware is licensed under the [Lesser General Public License (LGPL-3.0)][info-license] license.  
-Copyright &copy; 2015, Nature Publishing Group
+Copyright &copy; 2016, Springer Nature
 
 
 
 [npm]: https://npmjs.org/
 [qs]: https://github.com/hapijs/qs
 
-[info-coverage]: https://coveralls.io/github/nature/qs-middleware
-[info-dependencies]: https://gemnasium.com/nature/qs-middleware
+[info-coverage]: https://coveralls.io/github/springernature/qs-middleware
+[info-dependencies]: https://gemnasium.com/springernature/qs-middleware
 [info-license]: LICENSE
 [info-node]: package.json
 [info-npm]: https://www.npmjs.com/package/qs-middleware
-[info-build]: https://travis-ci.org/nature/qs-middleware
-[shield-coverage]: https://img.shields.io/coveralls/nature/qs-middleware.svg
-[shield-dependencies]: https://img.shields.io/gemnasium/nature/qs-middleware.svg
+[info-build]: https://travis-ci.org/springernature/qs-middleware
+[shield-coverage]: https://img.shields.io/coveralls/springernature/qs-middleware.svg
+[shield-dependencies]: https://img.shields.io/gemnasium/springernature/qs-middleware.svg
 [shield-license]: https://img.shields.io/badge/license-LGPL%203.0-blue.svg
 [shield-node]: https://img.shields.io/badge/node.js%20support-0.10–5-brightgreen.svg
 [shield-npm]: https://img.shields.io/npm/v/qs-middleware.svg
-[shield-build]: https://img.shields.io/travis/nature/qs-middleware/master.svg
+[shield-build]: https://img.shields.io/travis/springernature/qs-middleware/master.svg

@@ -12,10 +12,10 @@
 
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nature/qs-middleware.git"
+		"url": "https://github.com/springernature/qs-middleware.git"
 	},
-	"homepage": "https://github.com/nature/qs-middleware",
-	"bugs": "https://github.com/nature/qs-middleware/issues",
+	"homepage": "https://github.com/springernature/qs-middleware",
+	"bugs": "https://github.com/springernature/qs-middleware/issues",
 	"license": "LGPL-3.0",
 
 	"engines": {
