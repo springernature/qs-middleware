@@ -27,7 +27,7 @@
   "devDependencies": {
     "istanbul": "^0.4.5",
     "mocha": "^3.0.0",
-    "mockery": "~1.4.0",
+    "mockery": "^2.0.0",
     "proclaim": "^3.0.0",
     "sinon": "^1.0.0",
     "xo": "^0.17.1"
