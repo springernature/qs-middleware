@@ -12,18 +12,10 @@ deps:
 	@echo "$(C_CYAN)> installing dependencies$(C_RESET)"
 	@npm install
 
-# Lint JavaScript
-lint: jshint jscs
-
-# Run JSHint
-jshint:
-	@echo "$(C_CYAN)> linting javascript$(C_RESET)"
-	@./node_modules/.bin/jshint .
-
-# Run JavaScript Code Style
-jscs:
-	@echo "$(C_CYAN)> checking javascript code style$(C_RESET)"
-	@./node_modules/.bin/jscs .
+# Lint JavaScript & CSS
+lint:
+	@echo "$(C_CYAN)> linting$(C_RESET)"
+	@./node_modules/.bin/xo
 
 # Run all tests
 test: test-coverage

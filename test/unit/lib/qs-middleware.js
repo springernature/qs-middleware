@@ -6,11 +6,12 @@ var assert = require('proclaim');
 var mockery = require('mockery');
 var sinon = require('sinon');
 
-describe('lib/qs-middleware', function() {
-	var qs, qsMiddleware, url;
+describe('lib/qs-middleware', function () {
+	var qs;
+	var qsMiddleware;
+	var url;
 
-	beforeEach(function() {
-
+	beforeEach(function () {
 		qs = require('../mock/qs');
 		mockery.registerMock('qs', qs);
 
@@ -18,28 +19,30 @@ describe('lib/qs-middleware', function() {
 		mockery.registerMock('url', url);
 
 		qsMiddleware = require('../../../lib/qs-middleware');
-
 	});
 
-	it('should be a function', function() {
+	it('should be a function', function () {
 		assert.isFunction(qsMiddleware);
 	});
 
-	describe('qsMiddleware()', function() {
+	describe('qsMiddleware()', function () {
 		var middleware;
 
-		beforeEach(function() {
+		beforeEach(function () {
 			middleware = qsMiddleware();
 		});
 
-		it('should return a function', function() {
+		it('should return a function', function () {
 			assert.isFunction(middleware);
 		});
 
-		describe('returnedFunction(request, response, next)', function() {
-			var next, parsedQuery, parsedUrl, request;
+		describe('returnedFunction(request, response, next)', function () {
+			var next;
+			var parsedQuery;
+			var parsedUrl;
+			var request;
 
-			beforeEach(function() {
+			beforeEach(function () {
 				next = sinon.spy();
 				parsedQuery = {
 					a: 'b',
@@ -56,47 +59,47 @@ describe('lib/qs-middleware', function() {
 				middleware(request, {}, next);
 			});
 
-			it('should parse the `request` url', function() {
+			it('should parse the `request` url', function () {
 				assert.calledOnce(url.parse);
 				assert.calledWithExactly(url.parse, request.url);
 			});
 
-			it('should parse the `request` query string', function() {
+			it('should parse the `request` query string', function () {
 				assert.calledOnce(qs.parse);
 				assert.calledWith(qs.parse, parsedUrl.query);
 			});
 
-			it('should add the parsed query string to the `request` object', function() {
+			it('should add the parsed query string to the `request` object', function () {
 				assert.strictEqual(request.query, parsedQuery);
 			});
 
-			it('should call `next`', function() {
+			it('should call `next`', function () {
 				assert.calledOnce(next);
 				assert.calledWithExactly(next);
 			});
-
 		});
-
 	});
 
-	describe('qsMiddleware(options)', function() {
-		var middleware, options;
+	describe('qsMiddleware(options)', function () {
+		var middleware;
+		var options;
 
-		beforeEach(function() {
+		beforeEach(function () {
 			options = {
 				foo: 'bar'
 			};
 			middleware = qsMiddleware(options);
 		});
 
-		it('should return a function', function() {
+		it('should return a function', function () {
 			assert.isFunction(middleware);
 		});
 
-		describe('returnedFunction(request, response, next)', function() {
-			var next, parsedUrl;
+		describe('returnedFunction(request, response, next)', function () {
+			var next;
+			var parsedUrl;
 
-			beforeEach(function() {
+			beforeEach(function () {
 				next = sinon.spy();
 				parsedUrl = {
 					query: 'a=b&b=c'
@@ -105,13 +108,10 @@ describe('lib/qs-middleware', function() {
 				middleware({}, {}, next);
 			});
 
-			it('should parse the `request` query string with the given `options`', function() {
+			it('should parse the `request` query string with the given `options`', function () {
 				assert.calledOnce(qs.parse);
 				assert.calledWith(qs.parse, parsedUrl.query, options);
 			});
-
 		});
-
 	});
-
 });
