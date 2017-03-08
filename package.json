@@ -1,13 +1,14 @@
 {
   "name": "qs-middleware",
-  "version": "1.0.2",
+  "version": "1.0.3",
 
   "description": "Connect querystring middleware",
   "keywords": [ "connect", "querystring" ],
 
-  "author": "Nature Publishing Group",
+  "author": "Springer Nature",
   "contributors": [
-    "Rowan Manning (http://rowanmanning.com/)"
+    "Rowan Manning (http://rowanmanning.com/)",
+    "José Bolos (https://github.com/joseluisbolos)"
   ],
 
   "repository": {

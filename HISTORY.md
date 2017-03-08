@@ -1,6 +1,12 @@
 
 # History
 
+## 1.0.3 (2017-03-08)
+
+* Replace jshint with [xo](https://github.com/sindresorhus/xo).
+* Update devDependencies.
+* Update `"author"` field in `package.json`.
+
 ## 1.0.2 (2017-03-06)
 
 * Update qs to version 6.4.0. Fixes https://snyk.io/vuln/npm:qs:20170213
