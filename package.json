@@ -26,16 +26,18 @@
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
-    "jscs": "^3.0.0",
-    "jshint": "^2.9.0",
     "mocha": "^3.0.0",
-    "mockery": "~1.4.0",
+    "mockery": "^2.0.0",
     "proclaim": "^3.0.0",
-    "sinon": "^1.0.0"
+    "sinon": "^1.0.0",
+    "xo": "^0.17.1"
   },
 
   "main": "./lib/qs-middleware.js",
   "scripts": {
     "test": "make ci"
+  },
+  "xo": {
+    "envs": ["mocha"]
   }
 }
